@@ -1,4 +1,4 @@
-// import "./index.css"
+import "./style.css"
 import moment from "moment";
 import { useEffect, useState } from "react";
 
@@ -141,45 +141,47 @@ const Hello = () => {
         <div className="main" >
 
             <div className="postingDiv"
-                style={isPosting ?
-                    { backgroundColor: "gainsboro" } :
-                    { backgroundColor: "whitesmoke" }}>
+            // style={isPosting ?
+            //     { backgroundColor: "gainsboro" } :
+            //     { backgroundColor: "whitesmoke" }}
+            >
 
-                {(isPosting) ?
-                    <form action="" className="postingForm" onSubmit={savePost}>
-                        <textarea
-                            className="postInput"
-                            autoFocus
-                            type="text"
-                            required
-                            max={100}
-                            onChange={(e) => {
-                                setPostText(e.target.value)
-                            }}
+                {/* {(isPosting) ? */}
+                <form action="" className="postingForm" onSubmit={savePost}>
+                    <textarea
+                        className="postInput"
+                        // autoFocus
+                        type="text"
+                        required
+                        max={100}
+                        onChange={(e) => {
+                            setPostText(e.target.value)
+                        }}
 
-                        />
+                    />
 
-                        <div className="btnDiv">
+                    <div className="btnDiv">
 
-                            <button className="shareBtn" onClick={() => {
-                                setPosting(!isPosting)
-                            }}>Cancel</button>
-                            <button type="submit" className="shareBtn">Share</button>
+                        <button className="shareBtn" onClick={() => {
+                            setPosting(!isPosting)
+                        }}>Cancel</button>
+                        <button type="submit" className="shareBtn">Share</button>
 
-                        </div>
+                    </div>
 
-                    </form>
-                    :
+                </form>
+                {/* :
                     null
-                }
+                } */}
 
-                {(isPosting) ? null : <button className="postingBtn"
+                {/* {(isPosting) ? null : 
+                <button className="postingBtn"
                     onClick={() => {
                         setPosting(!isPosting)
                     }}>
                     Post
                 </button>
-                }
+                } */}
             </div>
 
 
